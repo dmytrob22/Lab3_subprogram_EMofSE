@@ -1,5 +1,5 @@
-import random  # Importing the random module to generate random numbers
-from Mode import Mode  # Importing the Mode class to calculate the mode of a sequence
+import random
+from Mode import Mode
 
 
 class SequenceTester:
@@ -41,3 +41,6 @@ class SequenceTester:
         for result in self.results:
             sequence_str = ', '.join(map(str, result['Sequence']))  # Convert the sequence list to a string
             print(f"{sequence_str:<50} {result['Mode']}")  # Print the sequence and its mode in a formatted manner
+            sorted_sequence_str = ', '.join(map(str, sorted(result['Sequence'])))  # Convert the sorted sequence list to a string
+            print(f"{sorted_sequence_str:<50}")  # Print the sorted sequence
+            print()
